@@ -15,4 +15,4 @@ class PythonCHek:
 
 
 b = PythonCHek()
-b.check()
+
