@@ -45,10 +45,7 @@
 
 
 import requests
-
-
-
-
+import value as value
 
 passwords = {'123456', '123456789', 'qwerty', 'password', '1234567', '12345678', '12345',
              'iloveyou', '111111', '123123', 'abc123', 'qwerty123',
@@ -67,6 +64,7 @@ for i in passwords:
     cookie_value = responses.cookies.get('auth_cookie')
     cookies = {'auth_cookie': cookie_value}
     response_check_cookie = requests.post("https://playground.learnqa.ru/ajax/api/check_auth_cookie", cookies=cookies)
+    print(cookie_value)
     if response_check_cookie.text == "You are NOT authorized":
         continue
     else:
